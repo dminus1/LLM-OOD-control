@@ -1,0 +1,1 @@
+Below, there are 10 texts. Rank them by the decreasing probability of belonging to Class 1. No need to rank the examples. No explanations needed. Nothing else in the output, just the list of integers, e.g. 1 4 2 7 3 6 5 8 9 10.
