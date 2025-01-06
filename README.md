@@ -3,7 +3,7 @@
 
 Here, you can find all the data and source files to re-create our experiments.
 
-**1. Genre classificaion and OOD.**
+**1. Genre classificaion Task.**
 
 The commands to obtain **on-topic** classification accuracy can be found in the file "genre-on-topic-haiku.bat". It uses the following Python source files: "api-batch-Claude.py", "accuracy.py". The outputs from the LLM (Claude here) may need to be manually edited to remove the extra occurrences of "Class 1" and "Class 2" substrings, otherwise accuracy computation reports an assertion error. All the data (in ready-to-use prompt format) are in "genre-prompts-on-topic.zip" organized by topics, as in the paper. The true labels are in "labels-genre.zip".
 The results are typically better than the results obtain with off-topic examples described in the next paragraph. This is the evidence of OOD gap in genre-classification task with LLMs, one of the main findings in our paper.
@@ -13,6 +13,10 @@ The commands to run testing with **off-topic** demonstration examples are in "ge
 **Simple control** (telling to classify based on genre) is tested by "genre-off-topic-simple-control-haiku.bat" and "genre-prompts-off-topic-simple-control.zip". It somewhat reduces the OOD gap. **Detailed control** (explaining what it means "genre" and "topical" for this task) is tested by "genre-off-topic-detailed-control-haiku.bat" and "genre-prompts-off-topic-detailed-control.zip". This further reduces OOD gap. Those reductions are the main findings of our paper.
 
 The commands for on-topic results with **GPT-4o** are in "genre-on-topic-gpt4o.bat". It uses "api-batch.py". Other types of prompts used in the paper (_off-topic, simple-control, detailed-control_) and the commands for the other OpenAI models can be easily obtained from them by renaming some text strings acordingly. Similarly, the commnads for the other Antropic models can be obtained.
+
+**2. Generated Text Detection Task.**
+
+The file structure and naming convention are similar to those above in section 1: "gen-id.off-topic.haiku3.5.bat" tests off-topic examples, no classification attribute control. "replacef.py" is used to modify prompts, which are taken from "genid-prompts-off-topic.zip". "genid-labels.zip" are the true labels (same for all prompt types). "ClaudeAPItest.py" is used to obtain outputs from Anthropic's LLMs. "ee-prompt.txt" and "accuracy-prompt.txt" are the auxiliary auxiliary to produce prompts.
 
 
 
