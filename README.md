@@ -18,5 +18,13 @@ The commands for on-topic results with **GPT-4o** are in "genre-on-topic-gpt4o.b
 
 The file structure and naming convention are similar to those above in section 1: "gen-id.off-topic.haiku3.5.bat" tests off-topic examples, no classification attribute control. "replacef.py" is used to modify prompts, which are taken from "genid-prompts-off-topic.zip". "genid-labels.zip" are the true labels (same for all prompt types). "ee-prompt.txt" and "accuracy-prompt.txt" are used to specify how to change the prompt templates.  "ClaudeAPItest.py" is used to obtain outputs from Anthropic's LLMs. "accuracy-from-list-of-predictions.py" to calculate the accuracy. Similarly to secion (1) above, some manuall cleaning of the outputs may be occasionally needed so it would run without failing asserts.
 
+Testing OpenAPI models requires calling a different Python source to use its API, e.g. this should be used for topic 17:
+
+```bash
+python replacef.py --inp prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.txt --out tmp-control-prompt.txt --target_file ee-prompt.txt --replacement_file  control-prompt-accuracy.txt
+python api-3.5-turbo-for-GPT.py --inp tmp-control-prompt.txt --out prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.control.out.gpt3.5.run1.a.txt --model gpt-3.5-turbo-0125
+python accuracy-from-list-of-predictions.py --positive_indices human-labels-topic-17-giga-sonnet3.txt --predictions prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.control.out.gpt3.5.run1.a.txt
+```
+
 
 
