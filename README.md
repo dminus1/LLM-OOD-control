@@ -43,7 +43,8 @@ python replacef.py --inp prompt-gen-id-topic-1-hyper-off-topic.ee.sonnet3.txt --
 python api-3.5-turbo-for-GPT.py --inp tmp-control-prompt.txt --out prompt-gen-id-topic-1-hyper-off-topic.ee.sonnet3.control.details.out.gpt4o.run3.a.txt --model gpt-4o
 python accuracy-from-list-of-predictions.py --positive_indices human-labels-topic-1-hyper-sonnet3.txt --predictions prompt-gen-id-topic-1-hyper-off-topic.ee.sonnet3.control.details.out.gpt4o.run3.a.txt
 ```
-
+The above examples can be modified and combined as needed in order to test all the remaining configurations mentioned in our paper.
+Contact us if any questions!
 
 
 
