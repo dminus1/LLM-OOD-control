@@ -10,4 +10,9 @@ The results are typically better than the results obtain with off-topic examples
 
 The commands to run testing with **off-topic** demonstration examples are in "genre-off-topic-haiku.bat". The datafiles are in "genre-prompts-off-topic.zip". The test texts are the same as in the previous paragraph, so are the true labels. The demonstration examples are from off-topic texts, as described in our paper. The results are generally worse than with off-topic examples described in the previous paragraph. This gap is reduced when the prompt excplicitely asks not to use text topics as classification attributes, as described in our paper and detailed in the paragphaphs below.
 
+**Simple control** (telling to classify based on genre) is tested by "genre-off-topic-simple-control-haiku.bat" and "genre-prompts-off-topic-simple-control.zip". It somewhat reduces the OOD gap. **Detailed control** (explaining what it means "genre" and "topical" for this task) is tested by "genre-off-topic-detailed-control-haiku.bat" and "genre-prompts-off-topic-detailed-control.zip". This further reduces OOD gap. Those reductions are the main findings of our paper.
+
+
+
+
 
