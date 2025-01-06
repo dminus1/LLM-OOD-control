@@ -25,11 +25,23 @@ python replacef.py --inp prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.txt --
 python api-3.5-turbo-for-GPT.py --inp tmp-control-prompt.txt --out prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.control.out.gpt3.5.run1.a.txt --model gpt-3.5-turbo-0125
 python accuracy-from-list-of-predictions.py --positive_indices human-labels-topic-17-giga-sonnet3.txt --predictions prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.control.out.gpt3.5.run1.a.txt
 ```
-```bash
 An example of commands to test on-topic accuracy (the prompt templates are in "genid-prompts-on-topic.zip"):
+```bash
 python replacef.py --inp prompt-gen-id-topic-1-hyper-on-topic.ee.sonnet3.txt --out tmp-control-prompt.txt --target_file ee-prompt.txt --replacement_file accuracy-prompt.txt
 python api-3.5-turbo-for-GPT.py --inp tmp-control-prompt.txt --out prompt-gen-id-topic-1-hyper-on-topic.ee.sonnet3.out.gpt4o.run2.a.txt --model gpt-4o
 python accuracy-from-list-of-predictions.py --positive_indices human-labels-topic-1-hyper-sonnet3.txt --predictions prompt-gen-id-topic-1-hyper-on-topic.ee.sonnet3.out.gpt4o.run2.a.txt
+```
+Here is an example of simple prompt control:
+```bash
+python replacef.py --inp prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.txt --out tmp-control-prompt.txt --target_file ee-prompt.txt --replacement_file  control-prompt-accuracy.txt
+python api-3.5-turbo-for-GPT.py --inp tmp-control-prompt.txt --out prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.control.out.gpt3.5.run1.a.txt --model gpt-3.5-turbo-0125
+python accuracy-from-list-of-predictions.py --positive_indices human-labels-topic-17-giga-sonnet3.txt --predictions prompt-gen-id-topic-17-giga-off-topic.ee.sonnet3.control.out.gpt3.5.run1.a.txt
+```
+Here is an example of detailed prompt control:
+```bash
+python replacef.py --inp prompt-gen-id-topic-1-hyper-off-topic.ee.sonnet3.txt --out tmp-control-prompt.txt --target_file ee-prompt.txt --replacement_file control-prompt-accuracy.details.txt
+python api-3.5-turbo-for-GPT.py --inp tmp-control-prompt.txt --out prompt-gen-id-topic-1-hyper-off-topic.ee.sonnet3.control.details.out.gpt4o.run3.a.txt --model gpt-4o
+python accuracy-from-list-of-predictions.py --positive_indices human-labels-topic-1-hyper-sonnet3.txt --predictions prompt-gen-id-topic-1-hyper-off-topic.ee.sonnet3.control.details.out.gpt4o.run3.a.txt
 ```
 
 
