@@ -12,7 +12,7 @@ The commands to run testing with **off-topic** demonstration examples are in "ge
 
 **Simple control** (telling to classify based on genre) is tested by "genre-off-topic-simple-control-haiku.bat" and "genre-prompts-off-topic-simple-control.zip". It somewhat reduces the OOD gap. **Detailed control** (explaining what it means "genre" and "topical" for this task) is tested by "genre-off-topic-detailed-control-haiku.bat" and "genre-prompts-off-topic-detailed-control.zip". This further reduces OOD gap. Those reductions are the main findings of our paper.
 
-
+The commands for on-topic results with **GPT-4o** are in "genre-on-topic-gpt4o.bat". It uses "api-batch.py". Other types of prompts used in the paper (_off-topic, simple-control, detailed-control_) and the commands for the other OpenAI models can be easily obtained from them by renaming some text strings acordingly. Similarly, the commnads for the other Antropic models can be obtained.
 
 
 
