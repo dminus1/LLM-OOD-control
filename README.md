@@ -16,7 +16,7 @@ The commands for on-topic results with **GPT-4o** are in "genre-on-topic-gpt4o.b
 
 **2. Generated Text Detection Task.**
 
-The file structure and naming convention are similar to those above in section 1: "gen-id.off-topic.haiku3.5.bat" tests off-topic examples, no classification attribute control. "replacef.py" is used to modify prompts, which are taken from "genid-prompts-off-topic.zip". "genid-labels.zip" are the true labels (same for all prompt types). "ClaudeAPItest.py" is used to obtain outputs from Anthropic's LLMs. "ee-prompt.txt" and "accuracy-prompt.txt" are the auxiliary auxiliary to produce prompts.
+The file structure and naming convention are similar to those above in section 1: "gen-id.off-topic.haiku3.5.bat" tests off-topic examples, no classification attribute control. "replacef.py" is used to modify prompts, which are taken from "genid-prompts-off-topic.zip". "genid-labels.zip" are the true labels (same for all prompt types). "ee-prompt.txt" and "accuracy-prompt.txt" are used to specify how to change the prompt templates.  "ClaudeAPItest.py" is used to obtain outputs from Anthropic's LLMs. "accuracy-from-list-of-predictions.py" to calculate the accuracy. Similarly to secion (1) above, some manuall cleaning of the outputs may be occasionally needed so it would run without failing asserts.
 
 
 
